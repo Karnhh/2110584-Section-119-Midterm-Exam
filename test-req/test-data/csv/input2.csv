@@ -1,4 +1,4 @@
-"test_case_id",test_case_name,"first_name","last_name","email","gender","mobile","birthday","subjects","hobbies","address","state","city"
+"test_case_id","test_case_name","first_name","last_name","email","gender","mobile","birthday","subjects","hobbies","address","state","city"
 "1","First Name is blank","","Jerry","student007@gmail.com","Male","0936168895","Wednesday, March 4th","Maths","Music","1 Wangmai, Patumwan, Bangkok 10330","NCR","Delhi"
 "2","Last Name is blank","Tom","","student007@gmail.com","Male","0936168895","Wednesday, March 4th","Maths","Music","1 Wangmai, Patumwan, Bangkok 10330","NCR","Delhi"
 "3","Mobile is blank","Tom","Jerry","student007@gmail.com","Male","","Wednesday, March 4th","Maths","Music","1 Wangmai, Patumwan, Bangkok 10330","NCR","Delhi"
