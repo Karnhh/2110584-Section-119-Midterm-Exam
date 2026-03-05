@@ -1,2 +1,6 @@
 "test_case_id","test_case_name","state"
 "1","Do not select state",""
+"2","Cities in NCR state","NCR"
+"3","Cities in Uttar Pradesh state","Uttar Pradesh"
+"4","Cities in Haryana state","Haryana"
+"5","Cities in Rajasthan state","Rajasthan"
