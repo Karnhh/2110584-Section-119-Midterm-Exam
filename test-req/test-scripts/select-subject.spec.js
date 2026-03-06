@@ -11,11 +11,11 @@ test("1 Select one subject", async ({ page }) => {
   await page.getByRole('option', { name: "Maths" }).click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).toBeVisible();
 
   await expect(
-    await page.getByText('Civics', { exact: true })
+    page.getByText('Civics', { exact: true })
   ).not.toBeVisible();
 
 });
@@ -33,17 +33,17 @@ test("2 Select multiple subjects", async ({ page }) => {
   await page.getByRole('option', { name: 'Computer Science' }).click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Chemistry', { exact: true })
+    page.getByText('Chemistry', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Computer Science', { exact: true })
+    page.getByText('Computer Science', { exact: true })
   ).toBeVisible();
 
   await expect(
-    await page.getByText('Civics', { exact: true })
+    page.getByText('Civics', { exact: true })
   ).not.toBeVisible();
 
 });
@@ -83,46 +83,46 @@ test("3 Select all subjects", async ({ page }) => {
   await page.getByRole('option', { name: 'Biology' }).click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Chemistry', { exact: true })
+    page.getByText('Chemistry', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Computer Science', { exact: true })
+    page.getByText('Computer Science', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Commerce', { exact: true })
+    page.getByText('Commerce', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Civics', { exact: true })
+    page.getByText('Civics', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Accounting', { exact: true })
+    page.getByText('Accounting', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Arts', { exact: true })
+    page.getByText('Arts', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Social Studies', { exact: true })
+    page.getByText('Social Studies', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('English', { exact: true })
+    page.getByText('English', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Economics', { exact: true })
+    page.getByText('Economics', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Physics', { exact: true })
+    page.getByText('Physics', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Hindi', { exact: true })
+    page.getByText('Hindi', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('History', { exact: true })
+    page.getByText('History', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Biology', { exact: true })
+    page.getByText('Biology', { exact: true })
   ).toBeVisible();
   
 });
@@ -143,13 +143,13 @@ test("4 Delete one subject", async ({ page }) => {
   await page.getByRole('button', { name: 'Remove Chemistry' }).click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Chemistry', { exact: true })
+    page.getByText('Chemistry', { exact: true })
   ).not.toBeVisible();
   await expect(
-    await page.getByText('Computer Science', { exact: true })
+    page.getByText('Computer Science', { exact: true })
   ).toBeVisible();
 
 });
@@ -171,13 +171,13 @@ test("5 Delete some subjects", async ({ page }) => {
   await page.getByRole('button', { name: 'Remove Computer Science' }).click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).not.toBeVisible();
   await expect(
-    await page.getByText('Chemistry', { exact: true })
+    page.getByText('Chemistry', { exact: true })
   ).toBeVisible();
   await expect(
-    await page.getByText('Computer Science', { exact: true })
+    page.getByText('Computer Science', { exact: true })
   ).not.toBeVisible();
 
 });
@@ -198,13 +198,13 @@ test("6 Delete all subjects", async ({ page }) => {
   await page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path').click();
 
   await expect(
-    await page.getByText('Maths', { exact: true })
+    page.getByText('Maths', { exact: true })
   ).not.toBeVisible();
   await expect(
-    await page.getByText('Chemistry', { exact: true })
+    page.getByText('Chemistry', { exact: true })
   ).not.toBeVisible();
   await expect(
-    await page.getByText('Computer Science', { exact: true })
+    page.getByText('Computer Science', { exact: true })
   ).not.toBeVisible();
 
 });
@@ -215,19 +215,19 @@ test("7 Do not select subjects", async ({ page }) => {
     );
 
   await expect(
-    await page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
+    page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
   ).not.toBeVisible();
 
   await page.locator('#subjectsInput').fill('m');
 
   await expect(
-    await page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
+    page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
   ).not.toBeVisible();
 
   await page.locator('#subjectsInput').fill('');
 
   await expect(
-    await page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
+    page.locator('.subjects-auto-complete__indicator > .css-8mmkcg > path')
   ).not.toBeVisible();
 
 });

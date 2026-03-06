@@ -15,11 +15,11 @@ for (const record of records) {
     );
 
     await expect(
-      await page.getByRole('heading', { name: 'Practice Form' })
+      page.getByRole('heading', { name: 'Practice Form' })
     ).toBeVisible();
 
     await expect(
-      await page.getByRole('heading', { name: 'Student Registration Form' })
+      page.getByRole('heading', { name: 'Student Registration Form' })
     ).toBeVisible();
     
     await page.getByRole('textbox', { name: 'First Name' }).click();
@@ -42,14 +42,9 @@ for (const record of records) {
     await page.locator('.subjects-auto-complete__input-container').click();
     await page.locator('#subjectsInput').fill('m');
     await page.getByRole('option', { name: `${record.subjects}` }).click();
-    await page.locator('.subjects-auto-complete__input-container').click();
-    //await page.locator('#subjectsInput').fill('c');
-    //await page.getByRole('option', { name: 'Chemistry' }).click();
-    //await page.getByRole('button', { name: 'Remove Chemistry' }).click();
 
     await page.getByRole('checkbox', { name: `${record.hobbies}` }).check();
 
-    //await page.getByRole('button', { name: 'Choose File' }).click();
     await page.setInputFiles('#uploadPicture', 'test-data/pic/TomJerry.jpg');
     
     await page.getByRole('textbox', { name: 'Current Address' }).click();
@@ -63,9 +58,8 @@ for (const record of records) {
     await page.getByRole('button', { name: 'Submit' }).click();
 
     await expect(
-      await page.getByText('Thanks for submitting the form')
+      page.getByText('Thanks for submitting the form')
     ).toBeVisible();
-
-    await page.getByRole('button', { name: 'Close' }).click();
+    
   });
 }

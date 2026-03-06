@@ -17,7 +17,7 @@ for (const record of records) {
     if(record.test_case_id == 1)
     {
       await expect(
-        await page.locator('#city input')
+        page.locator('#city input')
       ).toBeDisabled();
 
     }else if(record.test_case_id == 2)
@@ -28,14 +28,16 @@ for (const record of records) {
       await page.locator('#city').click();
 
       await expect(
-        await page.getByRole('option', { name: "Delhi" })
+        page.getByRole('option', { name: "Delhi" })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: "Gurgaon" })
+        page.getByRole('option', { name: "Gurgaon" })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: "Delhi" })
+        page.getByRole('option', { name: "Delhi" })
       ).toBeVisible();
+
+      //locator('.css-t3ipsp-control > .css-hlgwow > .css-19bb58m')
 
     }else if(record.test_case_id == 3)
     {
@@ -45,13 +47,13 @@ for (const record of records) {
       await page.locator('#city').click();
 
       await expect(
-        await page.getByRole('option', { name: 'Agra' })
+        page.getByRole('option', { name: 'Agra' })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: 'Lucknow' })
+        page.getByRole('option', { name: 'Lucknow' })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: 'Merrut' })
+        page.getByRole('option', { name: 'Merrut' })
       ).toBeVisible();
 
     }else if(record.test_case_id == 4)
@@ -62,10 +64,10 @@ for (const record of records) {
       await page.locator('#city').click();
 
       await expect(
-        await page.getByRole('option', { name: 'Karnal' })
+        page.getByRole('option', { name: 'Karnal' })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: 'Panipat' })
+        page.getByRole('option', { name: 'Panipat' })
       ).toBeVisible();
 
     }else if(record.test_case_id == 5)
@@ -76,10 +78,10 @@ for (const record of records) {
       await page.locator('#city').click();
 
       await expect(
-        await page.getByRole('option', { name: 'Jaipur' })
+        page.getByRole('option', { name: 'Jaipur' })
       ).toBeVisible();
       await expect(
-        await page.getByRole('option', { name: 'Jaiselmer' })
+        page.getByRole('option', { name: 'Jaiselmer' })
       ).toBeVisible();
     }
   });

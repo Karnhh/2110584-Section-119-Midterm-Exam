@@ -15,11 +15,11 @@ for (const record of records) {
     );
 
     await expect(
-      await page.getByRole('heading', { name: 'Practice Form' })
+      page.getByRole('heading', { name: 'Practice Form' })
     ).toBeVisible();
 
     await expect(
-      await page.getByRole('heading', { name: 'Student Registration Form' })
+      page.getByRole('heading', { name: 'Student Registration Form' })
     ).toBeVisible();
     
     await page.getByRole('textbox', { name: 'First Name' }).click();
@@ -62,7 +62,7 @@ for (const record of records) {
     await page.getByRole('button', { name: 'Submit' }).click();
 
     await expect(
-      await page.getByText('Thanks for submitting the form')
+      page.getByText('Thanks for submitting the form')
     ).not.toBeVisible();
   });
 }
