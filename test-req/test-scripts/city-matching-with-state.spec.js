@@ -37,8 +37,6 @@ for (const record of records) {
         page.getByRole('option', { name: "Delhi" })
       ).toBeVisible();
 
-      //locator('.css-t3ipsp-control > .css-hlgwow > .css-19bb58m')
-
     }else if(record.test_case_id == 3)
     {
       await page.locator('#state').click();
