@@ -61,9 +61,6 @@ test("2 Change text in drop down list", async ({ page }) => {
   
     await page.getByRole('option', { name: "Delhi" }).click();
 
-    const testtext = page.locator('.css-t3ipsp-control > .css-hlgwow > .css-1dimb5e-singleValue').textContent();
-    console.log(testtext);
-
     await expect(
         page.locator('.css-t3ipsp-control > .css-hlgwow > .css-1dimb5e-singleValue')
     ).toContainText("Delhi");
